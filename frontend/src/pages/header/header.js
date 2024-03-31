@@ -1,6 +1,8 @@
 import React from 'react'
 import {useState} from 'react'
-import './header.css'
+
+import './header.css';
+import fableicon from '../../utilities/images/fable-icon.png'
 
 import Sidebar from '../sidebar/sidebar';
 
@@ -16,7 +18,7 @@ export default function Header() {
     <div>
     <div className='header'>
       <div className='left'>
-        <img src='https://flable.ai/wp-content/uploads/2023/07/Group-146-1.png' /> 
+        <img src={fableicon} /> 
         <button onClick={getSidebar}>...</button>
       </div>
       <div className='right'>
