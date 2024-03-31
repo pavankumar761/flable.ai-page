@@ -1,12 +1,12 @@
 import React from 'react'
 import Dropdown from './dropdown/dropdown'
-import InputField from './inputField/inputField'
+import Ask from './ask/ask'
 
 export default function Marcow() {
   return (
     <div>
         <Dropdown></Dropdown>
-        <InputField></InputField>
+        <Ask></Ask>
     </div>
   )
 }
