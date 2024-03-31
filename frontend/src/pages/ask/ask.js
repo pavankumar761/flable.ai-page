@@ -10,7 +10,6 @@ export default function Ask() {
 
     const handleSubmit= (e)=>{
       e.preventDefault();
-
     }
 
   return (
