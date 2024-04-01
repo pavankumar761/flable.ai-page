@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 
+import nolike from '../../utilities/images/flable-icon.png'
+
 export default function Reaction() {
 
     const [likeState, likeStateFunc] = useState(false)
@@ -16,8 +18,8 @@ export default function Reaction() {
 
   return (
     <div>
-          <img onClick={likeClick} src={likeState ? like : nolike} />
-          <img onClick={unLikeClick} src={unLikeState ? unlike : nounlike} />
+          <img onClick={likeClick} src={likeState ? 'like' : nolike} />
+          <img onClick={unLikeClick} src={unLikeState ? 'unlike' : 'nounlike'} />
     </div>
   )
 }

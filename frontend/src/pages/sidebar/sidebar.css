@@ -1,0 +1,36 @@
+.sidebar {
+    transition: left 0.3s ease;
+    position : fixed;
+    top: 80px;
+    bottom: 0;
+    width : 145px;
+    background-color : #fcfbfb;
+    color: #020202;
+    padding: 20px;
+}
+
+.sidebar p {
+    padding-left: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.sidebar p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 150%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar p:hover::before {
+    background-color: #057ceb;
+}
+
+.sidebar p:hover{
+    color: #057ceb;
+}

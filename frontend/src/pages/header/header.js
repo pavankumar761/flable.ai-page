@@ -2,7 +2,8 @@ import React from 'react'
 import {useState} from 'react'
 
 import './header.css';
-import fableicon from '../../utilities/images/fable-icon.png'
+import fableicon from '../../utilities/images/flable-icon.png'
+import Threelines from '../../utilities/images/Threelines.png'
 
 import Sidebar from '../sidebar/sidebar';
 
@@ -19,19 +20,19 @@ export default function Header() {
     <div className='header'>
       <div className='left'>
         <img src={fableicon} /> 
-        <button onClick={getSidebar}>...</button>
+          <div className='Threelines'><img src={Threelines} onClick={getSidebar} /></div>
       </div>
       <div className='right'>
       <div className='profile'>
-        <p >www.pavankumar.com </p>
-        <p className='admin'>Admin</p>
+            <div className='email'><p >www.pavankumar.com </p></div>
+            <div className='admin'><p >Admin</p></div>
         </div>
         <div className="profile-pic">
           <img src="https://picsum.photos/50" alt="Profile Picture" />
         </div>
       </div>
     </div>
-    { showSidebar && <Sidebar></Sidebar> }
+      <div className='sidebar' style={{ left: showSidebar ? '0' : '-300px' }}>{<Sidebar></Sidebar>}</div>
     </div>
   )
 }

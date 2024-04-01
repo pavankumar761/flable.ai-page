@@ -3,30 +3,56 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #dcdca1;
+    background-color: #ffffff;
+    border-bottom: 0.1px solid #e5c9c9;
+}
+
+.left{
+    display: flex;
+    padding-left: 10px;
 }
 
 .left img{
-    height: auto;
+    height: 30px;
     width: 100px;
     padding-right: 20px;
+}
+
+.Threelines img{
+    height : 25px;
+    width : 35px;
+    padding: 0px 0px 0px 20px;
+    border-radius: 15%;
 }
 
 .right{
     color: #040404;
     display: flex;
+
 }
 
 .profile{
     display: flex;
     flex-direction: column;
-    padding: 0px;
+    padding: 6px 10px 0px 0px;
     margin: 0px;
 }
 
 .profile p{
     padding: 0%;
     margin: 0%;
+}
+
+.email{
+    padding: 0px;
+    margin: 0px;
+}
+
+.admin {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0px;
+    margin: 0px;
 }
 
 .profile-pic {

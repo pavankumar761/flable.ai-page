@@ -1,7 +1,8 @@
 
 
 import Header from "./pages/header/header";
-import Marcow from "./pages/marco";
+import Marcow from "./pages/marco/marco";
+import './App.css'
 
 function App() {
   return (

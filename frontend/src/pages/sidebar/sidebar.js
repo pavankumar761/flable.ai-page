@@ -1,11 +1,13 @@
 import React from 'react'
 
+import '../sidebar/sidebar.css'
+
 export default function Sidebar() {
   return (
-    <div>
-        <h3>MARCO</h3>
-        <h3>Social Watch</h3>
-        <h3>Web Analytics</h3>
+    <div className='sidebar'>
+        <p>MARCO</p>
+        <p>Social Watch</p>
+        <p>Web Analytics</p>
     </div>
   )
 }
