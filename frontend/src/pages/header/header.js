@@ -2,25 +2,17 @@ import React from 'react'
 import {useState} from 'react'
 
 import './header.css';
-import fableicon from '../../utilities/images/flable-icon.png'
+import flableicon from '../../utilities/images/flable-icon.png'
 import Threelines from '../../utilities/images/Threelines.png'
+import profilepic from '../../utilities/images/profile-pic.jpeg'
 
-import Sidebar from '../sidebar/sidebar';
-
-export default function Header() {
-
-    const [showSidebar, showSidebarFunc] = useState(false);
-
-    const getSidebar = ()=>{
-        showSidebarFunc(!showSidebar);
-    }
+export default function Header(props) {
 
   return (
-    <div>
     <div className='header'>
       <div className='left'>
-        <img src={fableicon} /> 
-          <div className='Threelines'><img src={Threelines} onClick={getSidebar} /></div>
+        <img src={flableicon} /> 
+          <div className='Threelines'><img src={Threelines} onClick={props.getSidebar} /></div>
       </div>
       <div className='right'>
       <div className='profile'>
@@ -28,11 +20,9 @@ export default function Header() {
             <div className='admin'><p >Admin</p></div>
         </div>
         <div className="profile-pic">
-          <img src="https://picsum.photos/50" alt="Profile Picture" />
+          <img src={profilepic} alt="Profile Picture" />
         </div>
       </div>
-    </div>
-      <div className='sidebar' style={{ left: showSidebar ? '0' : '-300px' }}>{<Sidebar></Sidebar>}</div>
     </div>
   )
 }

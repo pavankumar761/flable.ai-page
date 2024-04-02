@@ -1,15 +1,17 @@
 import React from 'react'
 
-import Reaction from '../reaction/reaction'
-import Dropdown from '../dropdown/dropdown'
-import Ask from '../ask/ask'
+import Chat from '../chat/chat'
+import Footer from '../footer/footer'
 
 export default function Marcow() {
   return (
     <div>
-      <Reaction></Reaction>
-      <Dropdown></Dropdown>
-      <Ask></Ask>
+      <div>
+        <Chat/>
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   )
 }

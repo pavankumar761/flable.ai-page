@@ -1,7 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 
-export default function Ask() {
+import './ask.css'
+
+export default function Ask(props) {
     const [ask,askfunc] = useState('')
 
     const handleChange=(e)=>{
@@ -13,11 +15,9 @@ export default function Ask() {
     }
 
   return (
-    <div>
-    <form onSubmit={handleSubmit}>
-        <input onChange={handleChange} value={ask} type='text' placeholder='Ask MARCO'></input>
-        <button type='Submit'>Ask</button>
-      </form>
+    <div className='ask'>
+      <input onChange={handleChange} value={ask} type='text' placeholder={`Ask ${props.askwho}`} />
+      <button type='Submit'>Ask</button>
     </div>
   )
 }

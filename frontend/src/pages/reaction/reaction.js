@@ -18,7 +18,7 @@ export default function Reaction() {
 
   return (
     <div>
-          <img onClick={likeClick} src={likeState ? 'like' : nolike} />
+          <img onClick={likeClick} src={likeState ? 'like' : 'nolike'} />
           <img onClick={unLikeClick} src={unLikeState ? 'unlike' : 'nounlike'} />
     </div>
   )

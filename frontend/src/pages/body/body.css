@@ -1,0 +1,20 @@
+.body{
+   width: 100%;
+}
+
+.normal-body{
+    display: flex;
+    height: 100%;
+}
+
+.chat-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.footer{
+    
+}

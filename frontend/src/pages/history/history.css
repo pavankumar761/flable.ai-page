@@ -1,0 +1,41 @@
+.history {
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    top: 0;
+    padding: 0px;
+    margin: 0px;
+    width: 190px;
+    background-color: rgb(253, 253, 253);
+}
+
+.history-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 0px;
+}
+
+.history-header button{
+    color: #0587eb;
+    border-radius: 5px;
+    border: 2px solid #0587eb;
+    background-color: white;
+    margin: 0%;
+    transition: background-color 0.3s ease;
+}
+
+/* .history-header button:hover {
+    color: #0056b3;
+} */
+
+.history-body div{
+    padding-left: 10px;
+    margin: 0%;
+}
+
+.history-body p{
+    padding: 0%;
+    margin: 0%;
+}
