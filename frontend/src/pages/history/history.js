@@ -2,18 +2,24 @@ import React from 'react'
 
 import './history.css'
 
-export default function History() {
+export default function History(props) {
+
+
   return (
     <div className='history'>
         <div className='history-header'>
         <div className='history-title'>History</div>
-            <button>New Chat</button>
+            <button onClick={props.eraseConvo}>New Chat</button>
         </div>
         <div className='history-body'>
-        <div>
-            <p>Question 1</p>
-            <p>Anawer 1</p>
-        </div>
+            {
+              props.history.map((qaobj)=>(
+                <div>
+                  <div>{qaobj.question}</div>
+                  <div>{qaobj.answer}</div>
+                </div>
+              ))
+            }
         </div>
     </div>
   )

@@ -1,0 +1,10 @@
+.reaction{
+    display: flex;
+    height: 17px;
+    width: 20px;
+    padding: 0% 0% 0% 2%;
+}
+
+img{
+    padding: 1px 5px 3px 2px;
+}

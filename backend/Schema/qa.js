@@ -2,10 +2,13 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose;
 
 const qaSchema = new Schema({
-    Question : {
+    _id:{
+        type: String
+    },
+    question : {
         type : String
     },
-    Answer : {
+    answer : {
         type : String
     },
     reaction : {
@@ -17,4 +20,4 @@ const qaSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model('qa',qaSchema);
+module.exports = mongoose.model('qaM',qaSchema);

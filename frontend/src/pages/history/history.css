@@ -31,11 +31,7 @@
 } */
 
 .history-body div{
+    font-size: 12px;
     padding-left: 10px;
-    margin: 0%;
-}
-
-.history-body p{
-    padding: 0%;
     margin: 0%;
 }

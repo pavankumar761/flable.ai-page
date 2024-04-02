@@ -6,30 +6,40 @@
 
 .chat-head{
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: flex-end;
     padding: 10px 10px 5px ;
+    color: #057ceb;
+}
+
+.export{
+    padding: 0px 10px 0px 10px;
+
 }
 
 .qbox{ 
     display: flex;
     justify-content: flex-end;
     padding-right: 2%;
+    margin-left: 100px;
 }
 
 .abox {
     display: flex;
     justify-content: flex-start;
+    padding: 0%;
     padding-left: 2%;
 }
 
 .question{
-    background-color: rgb(122, 212, 250);
+    color: white;
+    background-color: #689bec;
     padding: 0.5% 1.5% 0.5% 1.5%;
     border-radius: 5px;
 }
 
 .answer{
-    background-color: rgb(193, 197, 199);
+    background-color: rgb(225, 225, 225);
     padding: 0.5% 1.5% 0.5% 1.5%;
+    margin-bottom: 0%;
     border-radius: 5px;
 }
