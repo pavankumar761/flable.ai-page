@@ -21,7 +21,7 @@ export default function Chat(props) {
 
   const likeapi1 = async(e)=>{
     try {
-      const res = await axios.post('http://localhost:4000/api/marco/like', { answer: e, value : 1 });
+      const res = await axios.post('https://flable-ai-page-1.onrender.com/api/marco/like', { answer: e, value : 1 });
       console.log('reaction sucessfully updated l1')
     } catch (error) {
       console.log('error in updating reaction',error)
@@ -30,7 +30,7 @@ export default function Chat(props) {
 
   const likeapi2 = async (e) => {
     try {
-      const res = await axios.post('http://localhost:4000/api/marco/like', { answer: e, value: -1 });
+      const res = await axios.post('https://flable-ai-page-1.onrender.com/api/marco/like', { answer: e, value: -1 });
       console.log('reaction sucessfully updated l2')
     } catch (error) {
       console.log('error in updating reaction', error)
@@ -39,7 +39,7 @@ export default function Chat(props) {
 
   const dislikeapi1 = async (e) => {
     try {
-      const res = await axios.post('http://localhost:4000/api/marco/dislike', { answer: e, value: 1 });
+      const res = await axios.post('https://flable-ai-page-1.onrender.com/api/marco/dislike', { answer: e, value: 1 });
       console.log('reaction sucessfully updated d1')
     } catch (error) {
       console.log('error in updating reaction', error)
@@ -48,7 +48,7 @@ export default function Chat(props) {
 
   const dislikeapi2 = async (e) => {
     try {
-      const res = await axios.post('http://localhost:4000/api/marco/dislike', { answer: e, value: -1 });
+      const res = await axios.post('https://flable-ai-page-1.onrender.com/api/marco/dislike', { answer: e, value: -1 });
       console.log('reaction sucessfully updated d2')
     } catch (error) {
       console.log('error in updating reaction', error)

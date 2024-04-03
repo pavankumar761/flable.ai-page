@@ -30,7 +30,7 @@ export default function Body(props) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:4000/api/marco/ask', { question: ask });
+            const res = await axios.post('https://flable-ai-page-1.onrender.com/api/marco/ask', { question: ask });
             convoFunc([...convo, { question: ask, answer: res.data.answer, date: cd, time: ct }]);
             historyFunc([...history, { question: ask, answer: res.data.answer }])
         } catch (error) {
