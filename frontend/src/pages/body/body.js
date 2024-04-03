@@ -31,12 +31,12 @@ export default function Body(props) {
         e.preventDefault();
         try {
             const res = await axios.post('https://flable-ai-page-1.onrender.com/api/marco/ask', { question: ask });
-            convoFunc([...convo, { question: ask, answer: res.data.answer, date: cd, time: ct }]);
-            historyFunc([...history, { question: ask, answer: res.data.answer }])
+            convoFunc(convo=>[...convo, { question: ask, answer: res.data.answer, date: cd, time: ct }]);
+            historyFunc(history=>[...history, { question: ask, answer: res.data.answer }])
         } catch (error) {
             console.log(`There is an error in fetching data : `, error)
-            convoFunc([...convo, { question: ask, answer: 'Sorry, I donno the answer', date: cd, time: ct }]);
-            historyFunc([...history, { question: ask, answer: 'Sorry, I donno the answer', date: cd, time: ct }])
+            convoFunc(convo => [...convo, { question: ask, answer: 'Sorry, I donno the answer', date: cd, time: ct }]);
+            historyFunc(history => [...history, { question: ask, answer: 'Sorry, I donno the answer', date: cd, time: ct }])
         }
         askFunc('')
     }
