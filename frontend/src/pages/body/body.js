@@ -17,6 +17,11 @@ export default function Body(props) {
     const [convo, convoFunc] = useState([])
     const [history, historyFunc] = useState([])
 
+
+    const date = new Date();
+    const cd = date.toLocaleDateString();
+    const ct = date.toLocaleTimeString();
+
     const handleChange = (e) => {
         askFunc(e.target.value)
         console.log(ask)
@@ -25,16 +30,13 @@ export default function Body(props) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            console.log(`kiki`)
             const res = await axios.post('http://localhost:4000/api/marco/ask', { question: ask });
-            convoFunc([...convo,{question :ask ,answer: res.data.answer}]);
+            convoFunc([...convo, { question: ask, answer: res.data.answer, date: cd, time: ct }]);
             historyFunc([...history, { question: ask, answer: res.data.answer }])
-            console.log(`ppp`)
         } catch (error) {
             console.log(`There is an error in fetching data : `, error)
-            convoFunc([...convo, { question: ask, answer: 'Sorry, I donno the answer' }]);
-            historyFunc([...history,{ question: ask, answer: 'Sorry, I donno the answer' }])
-
+            convoFunc([...convo, { question: ask, answer: 'Sorry, I donno the answer', date: cd, time: ct }]);
+            historyFunc([...history, { question: ask, answer: 'Sorry, I donno the answer', date: cd, time: ct }])
         }
         askFunc('')
     }
@@ -63,7 +65,7 @@ export default function Body(props) {
             <div className='normal-body' style={{ paddingLeft : props.showSidebar ? '200px' : '0px' }}>
                 <div className='history'><History eraseConvo={eraseConvo} history={history}></History></div>
                 <div className='chat-footer'>
-                    <div>
+                    <div className='chat'>
                         {
                             (bot==0)?<p>Welcome</p>:((bot==1)?<Marco convo={convo}/>:((bot==2)?<SocialWatch/>:<WebAnalytics/>))
                         }

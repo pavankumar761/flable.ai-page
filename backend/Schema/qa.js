@@ -11,8 +11,11 @@ const qaSchema = new Schema({
     answer : {
         type : String
     },
-    reaction : {
+    like : {
         type : Number
+    },
+    dislike: {
+        type: Number
     },
     date : {
         type : Date,

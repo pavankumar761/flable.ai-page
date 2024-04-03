@@ -14,10 +14,10 @@ export default function History(props) {
         <div className='history-body'>
             {
               props.history.map((qaobj)=>(
-                <div>
+                <>
                   <div>{qaobj.question}</div>
                   <div>{qaobj.answer}</div>
-                </div>
+                </>
               ))
             }
         </div>

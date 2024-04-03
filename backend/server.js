@@ -27,6 +27,28 @@ app.post(`/api/marco/ask`,async (req,res)=>{
     }
 }) 
 
+app.post('/api/marco/like', async (req,res)=>{
+    const ans = req.body.answer;
+    const { value } = req.body;
+    if(ans){
+        await qaM.updateOne({ answer: ans }, { $inc: { like: value } })
+        res.send('sucessfully updated')
+    }else{
+        res.send('updating went unsucessful')
+    }
+})
+
+app.post('/api/marco/dislike',async (req, res) => { 
+    const ans = req.body.answer;
+    const { value } = req.body;
+    if (ans) {
+        await qaM.updateOne({ answer: ans }, { $inc: { dislike: value } })
+        res.send('sucessfully updated')
+    } else {
+        res.send('updating went unsucessful')
+    }
+})
+
 app.get('/', (req, res) => {
     res.send('Hello World')
 })

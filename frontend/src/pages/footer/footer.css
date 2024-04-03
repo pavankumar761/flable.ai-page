@@ -1,20 +1,21 @@
 .footer{
     display: flex;
     height: 50px;
-    background-color: rgb(255, 255, 255);
     width: 86%;
-    bottom:3% ;
+    background-color: rgb(255, 255, 255);
+    bottom:0% ;
     position:fixed ;
-    border-top: 1px solid rgb(204, 204, 204);
+    border-top: 1px solid rgb(231, 231, 231);
+    padding: 1% 0px 1% 0px;
 }
 
 .dropdown{
     justify-content: flex-start;
-    padding: 10px 20px 10px 10px;
+    padding: 5px 20px 10px 10px;
+    margin: 0px 0px 0px 10px;
 }
 
 .ask{
-    flex: 1;
-    justify-content: flex-end;
+    width: inherit;
     padding: 5px 10px 0px 10px;
 }

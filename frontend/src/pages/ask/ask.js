@@ -5,11 +5,9 @@ import './ask.css'
 export default function Ask(props) {
 
   return (
-    <div className='ask'>
       <form onSubmit={props.handleSubmit}>
-      <input onChange={props.handleChange} value={props.ask} type='text' placeholder={`Ask ${props.askwho}`} />
+      <input onChange={props.handleChange} value={props.ask} type='text' placeholder={`Ask ${props.askwho}`} required />
       <button type='submit' >Ask</button>
     </form>
-    </div>
   )
 }
